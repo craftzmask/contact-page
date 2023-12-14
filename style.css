@@ -88,6 +88,14 @@ select {
   padding-left: 24px;
 }
 
+select {
+  appearance: none;
+  background-image: url("./assets/Expand_down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+}
+
 input::placeholder {
   color: var(--placeholder-text-color);
 }
