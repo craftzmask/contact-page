@@ -1,0 +1,167 @@
+:root {
+  --placeholder-text-color: #cdd5e0;
+  --text-color: #111729;
+  --button-text-color: #4036a9;
+  --container-width: 700px;
+}
+
+* {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+  background-image: url("./assets/bg-image.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+}
+
+.header {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-bottom: 55px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 64px;
+  height: 100vh;
+}
+
+.container__heading {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 64px;
+  font-weight: 700;
+  width: var(--container-width);
+  text-align: center;
+  color: white;
+}
+
+.container__subheading {
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: 32px;
+  width: var(--container-width);
+  text-align: center;
+  color: white;
+}
+
+form {
+  width: 100%;
+  padding: 32px 32px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  margin-bottom: 24px;
+}
+
+.input label {
+  display: block;
+  color: white;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+input,
+select {
+  height: 64px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 24px;
+}
+
+input::placeholder {
+  color: var(--placeholder-text-color);
+}
+
+select#size,
+select#subject {
+  color: var(--text-color);
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-left: 24px;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+button {
+  background-color: white;
+  color: var(--button-text-color);
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  padding: 24px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 1360px) {
+  .header {
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .container__heading {
+    width: 60%;
+    font-size: 48px;
+  }
+
+  .container__subheading {
+    width: 50%;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .header {
+    padding: 0 24px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .container__heading {
+    width: 100%;
+    font-size: 48px;
+  }
+
+  .container__subheading {
+    width: 70%;
+    font-size: 20px;
+  }
+
+  .input-row {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+}
